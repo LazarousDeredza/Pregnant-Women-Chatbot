@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.chatbot" >
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".Module"
+        android:allowBackup="true"
+        android:icon="@drawable/imageikon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Chatbot" >
+        <activity
+            android:name=".forgotpassword"
+            android:exported="true" />
+        <activity
+            android:name=".CreateEvent"
+            android:exported="true" />
+        <activity
+            android:name=".NotificationMessage"
+            android:exported="true" />
+        <activity
+            android:name=".Alarm"
+            android:exported="true" />
+        <activity
+            android:name=".Reminder"
+            android:exported="true"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".ViewQuestion"
+            android:exported="true" />
+        <activity
+            android:name=".AddQuestion"
+            android:exported="true" />
+        <activity
+            android:name=".AdminHome"
+            android:exported="true" />
+        <activity
+            android:name=".AddEmergerncy"
+            android:exported="true" />
+        <activity
+            android:name=".Emergerncy"
+            android:exported="true" />
+        <activity
+            android:name=".AddTip"
+            android:exported="true" />
+        <activity
+            android:name=".Tips"
+            android:exported="true" />
+        <activity
+            android:name=".AddContact"
+            android:exported="true" />
+        <activity
+            android:name=".Contact"
+            android:exported="true" />
+        <activity
+            android:name=".Questions"
+            android:exported="true" />
+        <activity
+            android:name=".Chat"
+            android:exported="true"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".UserProfile"
+            android:exported="true" />
+        <activity
+            android:name=".Settings"
+            android:exported="true"
+            android:parentActivityName=".Home"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".Home"
+            android:exported="true" />
+        <activity
+            android:name=".SignUp"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".BootUpReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AlarmBrodcast" />
+    </application>
+
+</manifest>

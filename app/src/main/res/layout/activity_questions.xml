@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Questions">
+
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+                android:text="Frequently Asked Questions And Their Answers"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+        />
+        <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/black"
+
+                android:id="@+id/progressBar2"/>
+        <ListView
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listviewtxt"
+                android:divider="#03A9F4"
+                android:dividerHeight="3.0sp"
+                android:choiceMode="singleChoice"
+                android:listSelector="@android:color/darker_gray"
+                android:minHeight="48dp">
+
+        </ListView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
